@@ -1,0 +1,24 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.4.2
+  #- smartcontractkit/chainlink-brownie-contracts@1.1.1
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.2'
+      #- '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1'
+
+networks:
+  default: ganache-local
+
+  rinkeby:
+    host: "https://rinkeby.infura.io/v3/d03c7fa657ad431fb4aee1180ba3de7b"
+
+  kovan:
+    host: "https://kovan.infura.io/v3/d03c7fa657ad431fb4aee1180ba3de7b"
+  
+  ropsten: 
+    host: "https://ropsten.infura.io/v3/d03c7fa657ad431fb4aee1180ba3de7b"
+
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
